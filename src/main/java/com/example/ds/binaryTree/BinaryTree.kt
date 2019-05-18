@@ -1,5 +1,7 @@
 package com.example.ds.binaryTree
 
+import com.example.ds.dataStructures.Queue
+
 /**
  * @author santhosh.kc
  */
@@ -17,7 +19,32 @@ class BinaryNode<T : Comparable<T>>(var value: T, var left: BinaryNode<T>? = nul
         return left?.getHeight() ?: 0 - (right?.getHeight() ?: 0)
     }
 
+    fun getLeftBalance() : Int {
+        return left?.getBalance() ?: 0
+    }
+
+    fun getRightBalance() : Int {
+        return right?.getBalance() ?: 0
+    }
+
     override fun toString(): String {
-        return super.toString()
+        val queue = Queue<BinaryNode<T>>()
+        queue.enqueue(this)
+        queue.enqueue(null)
+        val sb = StringBuffer()
+        while(!queue.isEmpty()) {
+            val deq = queue.dequeue()
+            if (deq == null) {
+                if (!queue.isEmpty()) {
+                    sb.append("\n")
+                    queue.enqueue(null)
+                }
+            } else {
+                sb.append(deq.value)
+                deq.left?.let { queue.enqueue(it) }
+                deq.right?.let { queue.enqueue(it) }
+            }
+        }
+        return sb.toString()
     }
 }

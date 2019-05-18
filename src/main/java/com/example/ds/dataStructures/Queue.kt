@@ -13,8 +13,6 @@ class Queue<T>(private val capacity : Int = Int.MAX_VALUE) {
     private var tail : QueueNode? = null
 
     fun enqueue(value : T?) {
-        value ?: return
-
         if (!ensureCapacity()) {
             throw RuntimeException("Queue is full")
         }
@@ -29,6 +27,7 @@ class Queue<T>(private val capacity : Int = Int.MAX_VALUE) {
             newNode.prev = tail
             tail = newNode
         }
+        count++
     }
 
     fun dequeue() : T? {
@@ -42,13 +41,18 @@ class Queue<T>(private val capacity : Int = Int.MAX_VALUE) {
         head?.next = null
         newHead?.prev = null
         head = newHead
+        count--
 
         return ret
+    }
+
+    fun isEmpty() : Boolean{
+        return count == 0
     }
 
     private fun ensureCapacity() : Boolean {
         return count + 1 <= capacity
     }
 
-    inner class QueueNode(val value : T, var next : QueueNode? = null, var prev : QueueNode? = null)
+    inner class QueueNode(val value : T?, var next : QueueNode? = null, var prev : QueueNode? = null)
 }
