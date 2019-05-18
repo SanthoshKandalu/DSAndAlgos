@@ -10,7 +10,8 @@ class Stack<T> (private val capacity : Int = Int.MAX_VALUE) {
     var top : StackNode<T>? = null
     var count = 0
 
-    fun push(value : T) {
+    fun push(value : T?) {
+        value ?: return
         if (!ensureCapacity()) {
             throw RuntimeException("Stack is full")
         }
