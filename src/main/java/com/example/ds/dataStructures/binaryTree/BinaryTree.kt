@@ -1,4 +1,4 @@
-package com.example.ds.binaryTree
+package com.example.ds.dataStructures.binaryTree
 
 import com.example.ds.dataStructures.Queue
 
