@@ -3,7 +3,7 @@ package com.example.ds.dataStructures.binaryTree
 import com.example.ds.dataStructures.Queue
 
 /**
- * @author santhosh.kc
+ * @author santhosh.kandalu
  */
 class BinaryNode<T : Comparable<T>>(var value: T, var left: BinaryNode<T>? = null, var right: BinaryNode<T>? = null) :
     Comparable<BinaryNode<T>> {

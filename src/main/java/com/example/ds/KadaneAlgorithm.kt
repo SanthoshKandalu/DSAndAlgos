@@ -1,5 +1,8 @@
 package com.example.ds
 
+/**
+ * @author santhosh.kandalu
+ */
 class KadaneAlgorithm {
 
     fun findMaxSumSubArrayUsingKadane(array: IntArray?): IntArray? {

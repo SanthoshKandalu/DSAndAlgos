@@ -1,7 +1,7 @@
 package com.example.ds.helper
 
 /**
- * @author santhosh.kc
+ * @author santhosh.kandalu
  */
 fun <T : Comparable<T>>quickSort(array : Array<T>?, start : Int = 0, end : Int = array?.size?.minus(1) ?: 0) {
     array ?: return

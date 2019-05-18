@@ -3,7 +3,7 @@ package com.example.ds.dataStructures
 import java.lang.RuntimeException
 
 /**
- * @author santhosh.kc
+ * @author santhosh.kandalu
  */
 class Queue<T>(private val capacity : Int = Int.MAX_VALUE) {
 
