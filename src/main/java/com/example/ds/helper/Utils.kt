@@ -14,10 +14,10 @@ fun <T : Comparable<T>>quickSort(array : Array<T>?, start : Int = 0, end : Int =
     var right = end - 1
 
     while (true) {
-        while (left < end && array[left++] < array[end]);
-        while (right >= start && array[right--] >= array[end]);
+        while (left < end && array[left] < array[end]) {left++}
+        while (right >= start && array[right] >= array[end]) {right--}
 
-        if (left >= right) {
+        if (left > right) {
             break
         }
 

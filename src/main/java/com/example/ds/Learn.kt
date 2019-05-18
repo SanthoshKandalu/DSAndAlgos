@@ -5,7 +5,10 @@ class Learning {
     companion object {
         @JvmStatic
         fun main(array : Array<String>) {
-            learnKadaneAlgorithm()
+            //learnKadaneAlgorithm()
+            val intArray = arrayOf(9,8,7,6,5)
+            com.example.ds.helper.quickSort(array = intArray)
+            intArray.forEach { System.out.print("$it ") }
         }
     }
 }
