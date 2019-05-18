@@ -1,5 +1,8 @@
 package com.example.ds.binaryTree
 
+/**
+ * @author santhosh.kc
+ */
 class BinaryNode<T : Comparable<T>>(var value: T, var left: BinaryNode<T>? = null, var right: BinaryNode<T>? = null) :
     Comparable<BinaryNode<T>> {
     override fun compareTo(other: BinaryNode<T>): Int {
@@ -12,5 +15,9 @@ class BinaryNode<T : Comparable<T>>(var value: T, var left: BinaryNode<T>? = nul
 
     fun getBalance() : Int {
         return left?.getHeight() ?: 0 - (right?.getHeight() ?: 0)
+    }
+
+    override fun toString(): String {
+        return super.toString()
     }
 }
