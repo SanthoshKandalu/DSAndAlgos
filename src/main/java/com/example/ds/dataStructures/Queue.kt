@@ -2,6 +2,9 @@ package com.example.ds.dataStructures
 
 import java.lang.RuntimeException
 
+/**
+ * @author santhosh.kc
+ */
 class Queue<T>(private val capacity : Int = Int.MAX_VALUE) {
 
     private var count = 0
