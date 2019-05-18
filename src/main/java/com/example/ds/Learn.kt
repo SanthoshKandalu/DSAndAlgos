@@ -6,7 +6,7 @@ class Learning {
         @JvmStatic
         fun main(array : Array<String>) {
             //learnKadaneAlgorithm()
-            val intArray = arrayOf(9,8,7,6,5)
+            val intArray = arrayOf(1,2,3,4,5)
             com.example.ds.helper.quickSort(array = intArray)
             intArray.forEach { System.out.print("$it ") }
         }
