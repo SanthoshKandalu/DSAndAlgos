@@ -51,4 +51,8 @@ class BinaryNode<T : Comparable<T>>(var value: T, var left: BinaryNode<T>? = nul
     override fun equals(other: Any?): Boolean {
         return (other as? BinaryNode<*>)?.value == value
     }
+
+    override fun hashCode(): Int {
+        return value.hashCode()
+    }
 }
