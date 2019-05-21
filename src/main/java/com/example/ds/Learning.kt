@@ -18,7 +18,7 @@ class Learning {
             //System.out.println(findMaximumValueFromWeights(intArrayOf(10,20,30), intArrayOf(60,100,120),50))
             //val tree = formABinarySearchTreeFrom(arrayOf(7,4,10,3,6,1,2,5,9,12,8,11,13))
             //System.out.println(findFirstCommonParent(tree, BinaryNode(2), BinaryNode(4)))
-            printMatrixInCyclicManner(arrayOf(arrayOf(1,2,3),arrayOf(10,11,4), arrayOf(9,12,5), arrayOf(8,7,6)))
+            printMatrixInCyclicManner(arrayOf(arrayOf(1,10,9),arrayOf(2,11,8), arrayOf(3,12,7), arrayOf(4,5,6)), true)
         }
     }
 }
