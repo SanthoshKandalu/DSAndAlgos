@@ -11,7 +11,7 @@ class Learning {
             /*val intArray = arrayOf(1,2,3,4,5)
             com.example.ds.helper.quickSort(array = intArray)
             intArray.forEach { System.out.print("$it ") }*/
-            System.out.println(findMinimumNumberOfDenominationsRequired(intArrayOf(1,5,6,8),11))
+            System.out.println(findMaximumValueFromWeights(intArrayOf(10,20,30), intArrayOf(60,100,120),50))
         }
     }
 }
