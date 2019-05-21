@@ -52,7 +52,7 @@ fun findMaximumValueFromWeights(
 
     val without = findMaximumValueFromWeights(weights, value, maxWeight, curr - 1)
     val with = if (weights[curr] > maxWeight) without
-    else value[curr] + findMaximumValueFromWeights(weights, value, maxWeight - weights[curr], curr)
+    else value[curr] + findMaximumValueFromWeights(weights, value, maxWeight - weights[curr], curr - 1)
 
     val ret = Math.max(with, without)
 
