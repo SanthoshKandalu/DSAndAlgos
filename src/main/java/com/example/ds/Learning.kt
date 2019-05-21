@@ -1,5 +1,6 @@
 package com.example.ds
 
+import com.example.ds.arrays.printMatrixInCyclicManner
 import com.example.ds.dataStructures.binaryTree.BinaryNode
 import com.example.ds.dataStructures.binaryTree.findFirstCommonParent
 import com.example.ds.dataStructures.binaryTree.formABinarySearchTreeFrom
@@ -15,8 +16,9 @@ class Learning {
             com.example.ds.helper.quickSort(array = intArray)
             intArray.forEach { System.out.print("$it ") }*/
             //System.out.println(findMaximumValueFromWeights(intArrayOf(10,20,30), intArrayOf(60,100,120),50))
-            val tree = formABinarySearchTreeFrom(arrayOf(7,4,10,3,6,1,2,5,9,12,8,11,13))
-            System.out.println(findFirstCommonParent(tree, BinaryNode(6), BinaryNode(6)))
+            //val tree = formABinarySearchTreeFrom(arrayOf(7,4,10,3,6,1,2,5,9,12,8,11,13))
+            //System.out.println(findFirstCommonParent(tree, BinaryNode(2), BinaryNode(4)))
+            printMatrixInCyclicManner(arrayOf(arrayOf(1,2,3),arrayOf(10,11,4), arrayOf(9,12,5), arrayOf(8,7,6)))
         }
     }
 }
