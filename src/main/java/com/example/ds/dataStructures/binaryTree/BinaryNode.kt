@@ -47,4 +47,8 @@ class BinaryNode<T : Comparable<T>>(var value: T, var left: BinaryNode<T>? = nul
         }
         return sb.toString()
     }
+
+    override fun equals(other: Any?): Boolean {
+        return (other as? BinaryNode<*>)?.value == value
+    }
 }
