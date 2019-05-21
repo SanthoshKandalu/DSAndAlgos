@@ -11,20 +11,30 @@ class BinaryNode<T : Comparable<T>>(var value: T, var left: BinaryNode<T>? = nul
         return value.compareTo(other.value)
     }
 
-    fun getHeight() : Int{
-        return Math.max(left?.getHeight() ?:0, right?.getHeight() ?: 0) + 1
+    fun getHeight(): Int {
+        return Math.max(left?.getHeight() ?: 0, right?.getHeight() ?: 0) + 1
     }
 
-    fun getBalance() : Int {
+    fun getBalance(): Int {
         return left?.getHeight() ?: 0 - (right?.getHeight() ?: 0)
     }
 
-    fun getLeftBalance() : Int {
+    fun getLeftBalance(): Int {
         return left?.getBalance() ?: 0
     }
 
-    fun getRightBalance() : Int {
+    fun getRightBalance(): Int {
         return right?.getBalance() ?: 0
+    }
+
+    fun binarySearchInsert(toInsert: BinaryNode<T>?) {
+        toInsert ?: return
+
+        if (toInsert < this) {
+            left = left?.let { it.binarySearchInsert(toInsert) ; it } ?: toInsert
+        } else {
+            right = right?.let { it.binarySearchInsert(toInsert) ; it } ?: toInsert
+        }
     }
 
     override fun toString(): String {
@@ -32,7 +42,7 @@ class BinaryNode<T : Comparable<T>>(var value: T, var left: BinaryNode<T>? = nul
         queue.enqueue(this)
         queue.enqueue(null)
         val sb = StringBuffer()
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             val deq = queue.dequeue()
             if (deq == null) {
                 if (!queue.isEmpty()) {
@@ -40,7 +50,7 @@ class BinaryNode<T : Comparable<T>>(var value: T, var left: BinaryNode<T>? = nul
                     queue.enqueue(null)
                 }
             } else {
-                sb.append(deq.value)
+                sb.append("${deq.value} ")
                 deq.left?.let { queue.enqueue(it) }
                 deq.right?.let { queue.enqueue(it) }
             }
