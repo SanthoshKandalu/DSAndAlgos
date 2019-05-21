@@ -1,6 +1,6 @@
 package com.example.ds
 
-import com.example.ds.knapSacks.findMinimumNumberOfDenominationsRequired
+import com.example.ds.knapSacks.findMaximumValueFromWeights
 
 class Learning {
 
@@ -16,6 +16,3 @@ class Learning {
     }
 }
 
-fun learnKadaneAlgorithm() {
-    KadaneAlgorithm().findMaxSumSubArrayUsingKadane(intArrayOf(1, -1, 2))?.forEach { System.out.println(it) }
-}

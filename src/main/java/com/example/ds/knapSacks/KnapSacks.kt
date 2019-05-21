@@ -45,7 +45,7 @@ fun findMaximumValueFromWeights(
     }
 
     soFar?.let {
-        if (it[curr]?.containsKey(maxWeight)) {
+        if (it[curr].containsKey(maxWeight)) {
             return it[curr].getValue(maxWeight)
         }
     }
@@ -57,9 +57,6 @@ fun findMaximumValueFromWeights(
     val ret = Math.max(with, without)
 
     soFar?.let {
-        if (it[curr] == null) {
-            it[curr] = HashMap<Int,Int>()
-        }
         it[curr].put(maxWeight, ret)
     }
 
