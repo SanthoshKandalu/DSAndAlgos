@@ -2,6 +2,10 @@ package com.example.ds.arrays
 
 import com.example.ds.helper.isEmptyArray
 
+/**
+ * @author santhosh.kandalu
+ */
+
 fun printMatrixInCyclicManner(array : Array<Array<Int>>?, antiClockWise : Boolean = false) {
     if (array == null || array.isEmptyArray() || array[0].isEmptyArray()) {
         return
@@ -11,7 +15,7 @@ fun printMatrixInCyclicManner(array : Array<Array<Int>>?, antiClockWise : Boolea
         arrayOf(intArrayOf(1,0), intArrayOf(0,1), intArrayOf(-1,0), intArrayOf(0,-1))
     else
         arrayOf(intArrayOf(0,1), intArrayOf(1,0), intArrayOf(0,-1), intArrayOf(-1,0))
-    
+
     var left = 0; var right = array[0].size - 1; var top = 0; var bottom = array.size - 1
     var x = 0; var y = 0; var direction = 0
 
@@ -40,4 +44,22 @@ fun printMatrixInCyclicManner(array : Array<Array<Int>>?, antiClockWise : Boolea
         x += directions[direction][0]
         y += directions[direction][1]
     }
+}
+
+fun rotateMatrixInCyclicManner(array: Array<Array<Int>>?, antiClockWise: Boolean = false) {
+    array ?: return
+
+    if (array.isEmptyArray() || array[0].isEmptyArray()) {
+        return
+    }
+
+    val directions = if (antiClockWise)
+        arrayOf(intArrayOf(1,0), intArrayOf(0,1), intArrayOf(-1,0), intArrayOf(0,-1))
+    else
+        arrayOf(intArrayOf(0,1), intArrayOf(1,0), intArrayOf(0,-1), intArrayOf(-1,0))
+
+    var left = 0; var right = array[0].size - 1; var top = 0; var bottom = array.size - 1
+    var x = 0; var y = 0; var direction = 0
+
+
 }
