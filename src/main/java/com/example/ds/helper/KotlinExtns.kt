@@ -34,11 +34,9 @@ fun <T> Array<Array<T>>?.print() =
 
         for (i in 0 until this.size) {
             for (j in 0 until this[0].size) {
-                System.out.print("${this[i][j].toString()}  ")
+                System.out.print("${this[i][j].toString()}    ")
             }
-            if (i < this.size - 1) {
-                System.out.println()
-            }
+            System.out.println()
         }
     }
 
