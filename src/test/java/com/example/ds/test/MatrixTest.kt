@@ -4,7 +4,7 @@ import com.example.ds.arrays.rotateMatrixInCyclicManner
 import com.example.ds.helper.print
 import org.junit.Test
 
-class LearningTest {
+class MatrixTest {
     @Test
     fun testRotatingArrayClockwise() {
         rotateArray(arrayOf(arrayOf(1, 2, 3, 4), arrayOf(12, 13, 14, 5), arrayOf(11, 16, 15, 6), arrayOf(10, 9, 8, 7)))
