@@ -1,7 +1,7 @@
 package com.example.ds.dataStructures.binaryTree
 
 /**
- * @author santhosh.kc
+ * @author santhosh.kandalu
  */
 
 fun <T : Comparable<T>> formABinarySearchTreeFrom(array : Array<T>?) : BinaryNode<T>? {
