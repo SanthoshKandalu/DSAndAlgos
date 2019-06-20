@@ -49,7 +49,7 @@ class MatrixTest {
 
     private fun rotateArray(array : Array<Array<Int>>, antiClockwise : Boolean = false) {
         array.print()
-        System.out.println("-----------------")
+        println("-----------------")
         rotateMatrixInCyclicManner(array, antiClockwise)
         array.print()
     }
