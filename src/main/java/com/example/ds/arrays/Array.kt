@@ -10,9 +10,9 @@ fun IntArray?.findSubsetEqualToGivenSum(sum : Int) : Boolean{
 
     val matrix = Array(this.size) { Array(sum+1) { it == 0 } }
 
-    for (i in 0 until this.size) {
+    (0 until this.size).forEach { i ->
         if (this[i] < 0) return false
-        for (j in 1..sum) {
+        (1..sum).forEach { j ->
             if (this[i] > j) {
                 matrix[i][j] = if(i == 0) false else matrix[i][j-1]
             } else {
